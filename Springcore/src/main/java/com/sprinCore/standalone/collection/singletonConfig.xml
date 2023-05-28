@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd 
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+<!--  standlone List -->
+<util:list list-class="java.util.LinkedList" id="mybestFriends">
+<value>Anupama</value>  
+<value>Arti</value>  
+<value>Mala</value>  
+<value>Pooja</value>  
+</util:list>
+
+<bean 
+class="com.sprinCore.standalone.collection.LinkedListOrListPerson"
+name="person">
+<property name="friends" ref="mybestFriends"/>
+</bean>
+
+<util:map map-class="java.util.HashMap" id="fees">
+<entry key="core java" value="7000"/>
+<entry key="spring core" value="8000"/>
+<entry key="Hibernet" value="2000"/>
+<entry key="Django" value="4000"/>
+</util:map>
+
+<!-- Standalon Properties  -->
+<util:properties id="dbConfig">
+<prop key="driver">com.mysql.jdbc.driver</prop>
+<prop key="username">Munmun</prop>
+<prop key="password">000000</prop>
+<prop key="url">mysql:jdbc://localhost:3307/springCoreDB</prop>
+</util:properties>
+
+<bean 
+class="com.sprinCore.standalone.collection.MapFeeStructure"
+name="fee">
+<property name="feeStructure" ref="fees"/>
+<property name="proper" ref="dbConfig"/>
+</bean>
+
+
+
+</beans> 

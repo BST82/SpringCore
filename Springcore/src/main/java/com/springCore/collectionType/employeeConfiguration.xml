@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd"
+  >
+
+	
+
+	<!-- ******************Using value attribute ************ -->
+	<bean name="employee" 
+		class="com.springCore.collectionType.Employee">
+		
+		<!-- for name -->
+		<property name="name" value="Amrit kaur"/>
+		
+		<!-- for Phone List -->
+		<property name="phone" >
+		<list>
+		<value>8945234156</value>
+		<value>8956452341</value>
+		<value>3415652435</value>
+		<null/>
+		</list>
+		</property>
+		
+		<!-- for address set -->
+		<property name="address">
+		<set>
+		<value>Delhi</value>
+		<value>Noida</value>
+		<value>Banglore</value>
+		</set>
+		</property>
+		
+		<!-- for course Map -->
+		<property name="course">
+		<map>
+		<entry key="java" value="2 months "/>
+		<entry key="go lang" value="2.5 months "/>
+		<entry key="java script" value="1.5 months "/>
+		</map>
+		</property>
+		
+	</bean>
+		
+</beans>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!--1) This is our bean here we tell meta data to IOC container ******************Value 
+		as a TAG************ -->
+	<bean name="stu"
+		class="com.springCore.Springcore.beanPojoClass.Student">
+
+		<property name="studentId">
+			<value>1234</value>
+		</property>
+
+		<property name="studentName">
+			<value>Bhagyashri Tamrakar</value>
+		</property>
+
+		<property name="studentAddress">
+			<value>Kanpur</value>
+		</property>
+	</bean>
+
+	<!--2) ******************Value as a attribute************ -->
+
+	<bean name="stu2"
+		class="com.springCore.Springcore.beanPojoClass.Student">
+
+		<property name="studentId" value="101" />
+
+		<property name="studentName" value="Munmun" />
+
+		<property name="studentAddress" value="Banglore" />
+	</bean>
+
+	<!--3) ******************Using p schema ************ -->
+	<bean name="stu3"
+		class="com.springCore.Springcore.beanPojoClass.Student"
+		p:studentId="222" p:studentName="Chitra Tamrakar"
+		p:studentAddress="Delhi" />
+
+	<!--3) ******************Using c schema ************ -->
+	<bean name="stu4"
+		class="com.springCore.Springcore.beanPojoClass.Student"
+		c:studentId="222" c:studentName="Chitra Tamrakar"
+		c:studentAddress="Delhi" />
+
+</beans>

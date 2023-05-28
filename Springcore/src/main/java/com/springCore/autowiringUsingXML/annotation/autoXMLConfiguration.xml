@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		https://www.springframework.org/schema/context/spring-context.xsd">
+	
+ <context:annotation-config/>
+
+
+ <!-- On name changing it will give default value 
+	<bean
+	 name="ww"
+	 class="com.springCore.autowiringUsingXML.Work"
+	 p:name="Ankita Shingh" 
+	 p:city="Dehradun" />
+-->
+
+<bean
+	 name="w"
+	 class="com.springCore.autowiringUsingXML.annotation.Work"
+	 p:name="Ankita Shingh" 
+	 p:city="Dehradun" />
+<!-- reference type depen -->
+
+	  <bean
+	 name="working" 
+	 class="com.springCore.autowiringUsingXML.annotation.Worker"
+	 />
+	 
+	 <bean
+	 name="ww2"
+	 class="com.springCore.autowiringUsingXML.annotation.Work"
+	 p:name="Ankita Shingh" 
+	 p:city="Dehradun" />
+<!-- reference type depen -->
+	 
+	 
+	  <bean
+	 name="working2" 
+	 class="com.springCore.autowiringUsingXML.annotation.Worker2"/>
+	 
+</beans> 
